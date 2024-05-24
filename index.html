@@ -1,108 +1,161 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style>
+            .chess-board {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+            }
+            .chess-board { 
+                 border-spacing: 10;
+                 border-collapse: collapse; 
+            }
+            .chess-board th { 
+                 padding: 0.5em; 
+            }
+            .chess-board th + th { 
+                 border-bottom: 10px solid #000;
+            }
+            .chess-board th:first-child,
+            .chess-board td:last-child {
+                 border-right: 10px solid #000; 
+            }
+            .chess-board tr:last-child td { 
+                 border-bottom: 10px solid; 
+            }
+            .chess-board th:empty {
+                 border: none; 
+            }
+            .chess-board td { 
+                 width: 1.5em; 
+                 height: 1.5em; 
+                 text-align: center; 
+                 font-size:70px; 
+                 line-height: 0;
+            }
+            .chess-board .light {
+                 background: #eee; 
+            }
+            .chess-board .dark { 
+                 background: #5c5c5c; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <table class="chess-board">
+            <tbody>
+                
+                <tr>
+                    <th></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+                    <th>H</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td class="light"><img src="bábúk/bastyafekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/pacifekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/futarfekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/kiralylanyfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/kiralyfekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/futarfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/pacifekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/bastyafekete.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td class="dark"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/parasztfekete.png" alt=""></td>
+                    <td class="light"><img src="bábúk/parasztfekete.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td class="light"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="light"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="light"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="light"><img src="bábúk/paraszt.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/paraszt.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td class="dark"><img src="bábúk/bastya.png" alt=""></td>
+                    <td class="light"><img src="bábúk/paci.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/futar.png" alt=""></td>
+                    <td class="light"><img src="bábúk/kiralylany.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/kiraly.png" alt=""></td>
+                    <td class="light"><img src="bábúk/futar.png" alt=""></td>
+                    <td class="dark"><img src="bábúk/paci.png" alt=""></td>
+                    <td class="light"><img src="bábúk/bastya.png" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=09:14 AM, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-
-<body>
-
-
-
-<table id='sakktabla' cellspacing=0>
-
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>1<img src="pieces/black/Chess_bdt45.svg" alt=""></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-</table>
 </body>
-
 </html>
